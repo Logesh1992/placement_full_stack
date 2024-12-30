@@ -1,0 +1,23 @@
+ul{
+    list-style-type: none;
+    display: flex;
+    background-color: antiquewhite;
+    gap: 20px;
+    color: black;
+}
+li{
+    cursor: pointer;
+    padding: 5px;
+    text-decoration: none;
+}
+Link{
+    text-decoration: none;
+}
+li:hover{
+    background-color: lightgray;    
+    border-radius: 10px;
+}
+.Link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
