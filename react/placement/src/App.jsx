@@ -12,6 +12,7 @@ import UseEffect_text from './component/functionComponents/UseEffect/UseEffect_t
 import UseRef from './component/functionComponents/UseRef/UseRef.jsx'
 import UseContext from './component/functionComponents/UseContext/UseContext.jsx'
 import FAQ from './component/functionComponents/Footer/FAQ.jsx'
+import SignUp from './component/functionComponents/signup.jsx'
 
 function App() {
   var log="LOGESH"
@@ -22,7 +23,7 @@ function App() {
       <NavBar/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About college={log} />} />
+          <Route path="/about" element={<SignUp/>} />
           <Route path="/gallery" element={<Gallery/>} />
           <Route path="/useEffect" element={<UseEffect/>} />
           <Route path="/useEffect_1" element={<UseEffect_text />}/>
