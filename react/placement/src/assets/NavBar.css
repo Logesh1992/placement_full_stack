@@ -1,19 +1,16 @@
-ul{
+#ul{
     list-style-type: none;
     display: flex;
     background-color: antiquewhite;
-    gap: 20px;
+    justify-content: space-evenly;
     color: black;
 }
-li{
+#li{
     cursor: pointer;
     padding: 5px;
     text-decoration: none;
 }
-Link{
-    text-decoration: none;
-}
-li:hover{
+#li:hover{
     background-color: lightgray;    
     border-radius: 10px;
 }
