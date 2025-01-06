@@ -9,7 +9,7 @@ var User=require('./Models/user')
 
 let app = express();
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://plac10002.netlify.app'],
+    origin: ['http://localhost:3000', 'https://plac10002.netlify.app','https://677b78b0ba784eb8ae0df4ce--plac10002.netlify.app'],
     methods: ['GET', 'POST'],
   }));
 app.use(express.json())
