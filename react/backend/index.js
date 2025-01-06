@@ -10,7 +10,10 @@ var User=require('./Models/user')
 let app = express();
 app.use(cors())
 app.use(express.json())
-mdb.connect("mongodb://localhost:27017/placement")
+mdb.connect(process.env.URL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
 .then(()=>{
     console.log("MongoDB connected successfully")
 })
@@ -54,11 +57,41 @@ app.post('/signup', async(req,res)=>{
     }
     
 })
-app.get('/users',async(req,res)=>{
-    var log =await User.find()
-    res.send(log);
-})
 
+app.post('/LogIn',async(req,res)=>{
+    console.log(req.body)
+    var {email,Password}=req.body
+    var exp = await User.findOne({email})
+    if(!exp){
+        console.log("User not found")
+        return res.status(400).json({ error: "User not found" });
+    }else{
+        if(exp.Password===Password){
+            console.log("User found")
+            return res.status(200).json({ message: "User found" });
+        }else{
+            console.log("Password incorrect",Password)
+            return res.status(400).json({ error: "Password incorrect" });
+        }
+    }
+
+})
+let id="677910ebde8f7fb6f547cceb"
+var getbyid=async(id)=>{
+    try{
+        var res=await User.findById(id);
+        if(res){
+            console.log(res)
+        }
+        else{
+            console.log("User not found")
+        }
+    }
+    catch(e){
+        console.log(e)
+    }
+}
+getbyid(id)
 
 app.listen(port,()=>{
     console.log(`Server is running on port ${process.env.PORT}`);

@@ -13,6 +13,7 @@ import UseRef from './component/functionComponents/UseRef/UseRef.jsx'
 import UseContext from './component/functionComponents/UseContext/UseContext.jsx'
 import FAQ from './component/functionComponents/Footer/FAQ.jsx'
 import SignUp from './component/functionComponents/signup.jsx'
+import LogIn from './component/functionComponents/LogIn.jsx'
 
 function App() {
   var log="LOGESH"
@@ -31,6 +32,7 @@ function App() {
           <Route path="/UseCon" element={<UseContext/>}/>
           <Route path="/contact" element={<Contact/>} />
           <Route path="/FAQ" element={<FAQ/>}/>
+          <Route path="/LogIn" element={<LogIn/>}/>
         </Routes>
 
       <Footer />
