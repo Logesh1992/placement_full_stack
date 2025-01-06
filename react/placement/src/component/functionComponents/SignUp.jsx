@@ -15,7 +15,7 @@ const SignUp = () => {
     setErrorMsg("")
     setSuccessMsg("")
     try{
-      var response=await axios.post('http://localhost:3000/signup',user)
+      var response=await axios.post('https://placement-full-stack.onrender.com/signup',user)
       setSuccessMsg(response.data.message)
       navigate('/')
     }catch(err){

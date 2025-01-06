@@ -8,7 +8,10 @@ var User=require('./Models/user')
 
 
 let app = express();
-app.use(cors())
+app.use(cors({
+    origin: ['http://localhost:3000', 'https://your-frontend-service.onrender.com'],
+    methods: ['GET', 'POST'],
+  }));
 app.use(express.json())
 mdb.connect(process.env.URL,{
     useNewUrlParser: true,

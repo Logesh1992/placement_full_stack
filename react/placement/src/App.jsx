@@ -12,7 +12,7 @@ import UseEffect_text from './component/functionComponents/UseEffect/UseEffect_t
 import UseRef from './component/functionComponents/UseRef/UseRef.jsx'
 import UseContext from './component/functionComponents/UseContext/UseContext.jsx'
 import FAQ from './component/functionComponents/Footer/FAQ.jsx'
-import SignUp from './component/functionComponents/signup.jsx'
+import SignUp from './component/functionComponents/SignUp.jsx'
 import LogIn from './component/functionComponents/LogIn.jsx'
 
 function App() {
