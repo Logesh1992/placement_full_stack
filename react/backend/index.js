@@ -9,7 +9,7 @@ var User=require('./Models/user')
 
 let app = express();
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://your-frontend-service.onrender.com'],
+    origin: ['http://localhost:3000', 'https://plac10002.netlify.app'],
     methods: ['GET', 'POST'],
   }));
 app.use(express.json())
