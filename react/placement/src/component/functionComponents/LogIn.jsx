@@ -13,7 +13,7 @@ const LogIn = () => {
     var [success,setSuccessMsg] = useState("")
     var handleSubmit= async()=>{
         try{
-            await axios.post('https://placement-full-stack.onrender.com/LogIn',user)
+            await axios.post('https://plac10002.netlify.app/LogIn',user)
             navigate('/')
         }catch(err){
             if(err.response&&err.response.data&&err.response.data.error){

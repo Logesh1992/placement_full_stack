@@ -15,7 +15,7 @@ const SignUp = () => {
     setErrorMsg("")
     setSuccessMsg("")
     try{
-      var response=await axios.post('https://placement-full-stack.onrender.com/signup',user)
+      var response=await axios.post('https://plac10002.netlify.app/signup',user)
       setSuccessMsg(response.data.message)
       navigate('/')
     }catch(err){
