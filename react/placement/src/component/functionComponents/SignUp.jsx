@@ -27,7 +27,7 @@ const SignUp = () => {
   
   return (
     <div>
-      <label>sign-up</label><br></br>
+      <label>sign_up</label><br></br>
       <label>Name : </label>
       <input type='text' placeholder='Name' value={user.name} onChange={(e) => setUser({...user, name: e.target.value })} />
       <br/>
